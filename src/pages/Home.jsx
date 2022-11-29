@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import fetchSearch from '../fetchSearch';
+import fetchSearch from '../apis/fetchSearch';
 import useBreedList from '../useBreedList';
 import Results from '../Results';
 import AdoptedPetContext from '../contexts/AdoptedPetContext';
