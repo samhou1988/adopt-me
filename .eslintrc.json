@@ -1,9 +1,15 @@
 {
   "extends": [
     "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
     "prettier"
   ],
   "plugins": [
+    "react",
+    "import",
+    "jsx-a11y",
     "prettier"
   ],
   "parserOptions": {
@@ -18,7 +24,19 @@
     "node": true,
     "browser": true
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
   "rules": {
+    "react/react-in-jsx-scope": 0,
+    "react/prop-types": 0,
     "prettier/prettier": 0
   }
 }
