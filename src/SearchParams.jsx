@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useQuery } from "@tanstack/react-query";
-import fetchSearch from "./fetchSearch";
+import { useQuery } from '@tanstack/react-query';
+import fetchSearch from './fetchSearch';
 import useBreedList from './useBreedList';
 import Results from './Results';
 
@@ -11,12 +11,12 @@ const SearchParams = () => {
   const [breeds] = useBreedList(animal);
 
   const [requestParams, setRequestParams] = useState({
-    location: "",
-    animal: "",
-    breed: "",
+    location: '',
+    animal: '',
+    breed: '',
   });
 
-  const results = useQuery(["search", requestParams], fetchSearch);
+  const results = useQuery(['search', requestParams], fetchSearch);
   const pets = results?.data?.pets ?? [];
 
   return (
@@ -25,21 +25,16 @@ const SearchParams = () => {
         onSubmit={(e) => {
           e.preventDefault();
           const formData = new FormData(e.target);
-          const obj = {
-            animal: formData.get("animal") ?? "",
-            breed: formData.get("breed") ?? "",
-            location: formData.get("location") ?? "",
-          };
-          setRequestParams(obj);
+          setRequestParams({
+            animal: formData.get('animal') ?? '',
+            breed: formData.get('breed') ?? '',
+            location: formData.get('location') ?? '',
+          });
         }}
       >
         <label htmlFor="location">
           Location
-          <input
-            id="location"
-            name="location"
-            placeholder="Location"
-          />
+          <input id="location" name="location" placeholder="Location" />
         </label>
         <label htmlFor="animal">
           Animal
@@ -63,10 +58,7 @@ const SearchParams = () => {
         </label>
         <label htmlFor="breed">
           Breed
-          <select
-            id="breed"
-            name="breed"
-          >
+          <select id="breed" name="breed">
             <option>Please choose...</option>
             {breeds.map((breed) => (
               <option key={breed} value={breed}>
