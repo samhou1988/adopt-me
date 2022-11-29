@@ -1,19 +1,18 @@
 import { useState, useEffect } from 'react';
-import Pet from "./Pet";
+import Pet from './Pet';
+import useBreedList from './useBreedList';
 
-const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
+const ANIMALS = ['bird', 'cat', 'dog', 'rabbit', 'reptile'];
 
 const SearchParams = () => {
-  const [location, setLocation] = useState("Seattle, WA")
-  const [animal, setAnimal] = useState("");
-  const [breed, setBreed] = useState("")
-  const breeds = [];
+  const [location, setLocation] = useState('Seattle, WA');
+  const [animal, setAnimal] = useState('');
+  const [breed, setBreed] = useState('');
+  const [breeds] = useBreedList(animal);
   const [pets, setPets] = useState([]);
 
   async function requestPets() {
-    const res = await fetch(
-      `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
-    );
+    const res = await fetch(`http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`);
     const json = await res.json();
 
     setPets(json.pets);
@@ -38,11 +37,11 @@ const SearchParams = () => {
             value={animal}
             onChange={(e) => {
               setAnimal(e.target.value);
-              setBreed("");
+              setBreed('');
             }}
             onBlur={(e) => {
               setAnimal(e.target.value);
-              setBreed("");
+              setBreed('');
             }}
           >
             <option />
@@ -75,11 +74,9 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
-      {
-        pets.map((pet) => (
-          <Pet name={pet.name} animal={pet.animal} breed={pet.breed} key={pet.id} />
-        ))
-      }
+      {pets.map((pet) => (
+        <Pet name={pet.name} animal={pet.animal} breed={pet.breed} key={pet.id} />
+      ))}
     </div>
   );
 };
