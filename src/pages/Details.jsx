@@ -1,6 +1,7 @@
+import { useQuery } from '@tanstack/react-query';
 import { useState, useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
+
 import fetchPet from '@/apis/fetchPet';
 import Carousel from '@/components/Carousel';
 import ErrorBoundary from '@/components/ErrorBoundary';

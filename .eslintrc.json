@@ -43,6 +43,39 @@
   "rules": {
     "react/react-in-jsx-scope": 0,
     "react/prop-types": 0,
-    "prettier/prettier": 0
+    "prettier/prettier": 0,
+    "sort-imports": ["error", {
+      "ignoreCase": true,
+      "ignoreDeclarationSort": true,
+      "ignoreMemberSort": true,
+      "allowSeparatedGroups": true
+    }],
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always",
+        "groups": [
+          "builtin",
+          "external",
+          "index",
+          "sibling",
+          "parent",
+          "internal",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "external",
+            "position": "after"
+          }
+        ]
+      }
+    ]
   }
 }
