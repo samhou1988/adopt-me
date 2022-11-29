@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import fetchSearch from '../fetchSearch';
 import useBreedList from '../useBreedList';
 import Results from '../Results';
-import AdoptedPetContext from '../AdoptedPetContext';
+import AdoptedPetContext from '../contexts/AdoptedPetContext';
 
 const ANIMALS = ['bird', 'cat', 'dog', 'rabbit', 'reptile'];
 

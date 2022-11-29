@@ -5,7 +5,7 @@ import fetchPet from '../fetchPet';
 import Carousel from '../Carousel';
 import ErrorBoundary from '../ErrorBoundary';
 import Modal from '../Modal';
-import AdoptedPetContext from '../AdoptedPetContext';
+import AdoptedPetContext from '../contexts/AdoptedPetContext';
 
 const Details = () => {
   const { id } = useParams();
