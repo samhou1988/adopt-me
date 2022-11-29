@@ -147,8 +147,8 @@ header {
 }
 
 .search-params button,
-#modal button,
-#modal a,
+.modal button,
+.modal a,
 .details button {
   background-color: #ad343e;
   padding: 5px 25px;
@@ -161,7 +161,7 @@ header {
   cursor: pointer;
 }
 
-#modal a {
+.modal a {
   display: inline-block;
   margin-right: 15px;
   text-decoration: none;
@@ -179,7 +179,7 @@ header {
   border: 1px solid cornflowerblue;
 }
 
-#modal {
+.modal {
   background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   left: 0;
@@ -192,11 +192,11 @@ header {
   align-items: center;
 }
 
-#modal:empty {
+.modal:empty {
   display: none;
 }
 
-#modal>div {
+.modal>div {
   background-color: white;
   max-width: 500px;
   padding: 15px;
@@ -205,7 +205,7 @@ header {
   background: #faeff0;
 }
 
-#modal .buttons button {
+.modal .buttons button {
   display: inline-block;
   margin-right: 15px;
 }
