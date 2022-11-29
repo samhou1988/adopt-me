@@ -1,10 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
+import React from 'react';
 import { useContext, useState } from 'react';
 
-import fetchSearch from '@/apis/fetchSearch';
-import Results from '@/components/Results';
-import AdoptedPetContext from '@/contexts/AdoptedPetContext';
-import useBreedList from '@/hooks/useBreedList';
+import fetchSearch from '../apis/fetchSearch';
+import Results from '../components/Results';
+import AdoptedPetContext from '../contexts/AdoptedPetContext';
+import useBreedList from '../hooks/useBreedList';
 
 const ANIMALS = ['bird', 'cat', 'dog', 'rabbit', 'reptile'];
 
@@ -12,7 +13,7 @@ const SearchParams = () => {
   const [animal, setAnimal] = useState('');
   const [breeds] = useBreedList(animal);
   const [adoptedPet] = useContext(AdoptedPetContext);
-  const [requestParams, setRequestParams] = useState({
+  const [requestParams, setRequestParams] = useState<any>({
     location: '',
     animal: '',
     breed: '',
@@ -24,7 +25,7 @@ const SearchParams = () => {
   return (
     <div className="search-params">
       <form
-        onSubmit={(e) => {
+        onSubmit={(e: any) => {
           e.preventDefault();
           const formData = new FormData(e.target);
           setRequestParams({

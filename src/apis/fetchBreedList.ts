@@ -1,5 +1,5 @@
-async function fetchBreedList({ queryKey }) {
-  const animal = queryKey[1];
+async function fetchBreedList({ queryKey }): Promise<[]> | never {
+  const animal: string = queryKey[1];
 
   if (!animal) return [];
 

@@ -1,4 +1,6 @@
-import Pet from '@/components/Pet';
+import React from 'react';
+
+import Pet from '../components/Pet';
 
 const Results = ({ pets }) => {
   return (
