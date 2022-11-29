@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import { ReactComponent as DemoIcon } from '@/assets/svg/demo.svg';
+
 import styles from './Pet.module.less';
 
 type PetProps = {
@@ -24,6 +26,7 @@ const Pet = (props: PetProps) => {
         <img src={hero} alt={name} />
       </div>
       <div className={styles.info}>
+        <DemoIcon width={20} />
         <h1>{name}</h1>
         <h2>{`${animal} — ${breed} — ${location}`}</h2>
       </div>
