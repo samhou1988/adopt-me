@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
 import { useState, useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -54,7 +53,7 @@ const Details = () => {
   );
 };
 
-export default function DetailsErrorBoundary(props) {
+export default function DetailsErrorBoundary(props: any) {
   return (
     <ErrorBoundary>
       <Details {...props} />

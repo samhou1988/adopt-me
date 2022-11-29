@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
 import { useContext, useState } from 'react';
 
 import fetchSearch from '@/apis/fetchSearch';
