@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import styles from './Pet.module.less';
+
 type PetProps = {
   name: string,
   animal: string,
@@ -17,11 +19,11 @@ const Pet = (props: PetProps) => {
   }
 
   return (
-    <Link to={`/details/${id}`} className="pet">
-      <div className="image-container">
+    <Link to={`/details/${id}`} className={styles.pet}>
+      <div className={styles['image-container']}>
         <img src={hero} alt={name} />
       </div>
-      <div className="info">
+      <div className={styles.info}>
         <h1>{name}</h1>
         <h2>{`${animal} — ${breed} — ${location}`}</h2>
       </div>

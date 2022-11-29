@@ -2,6 +2,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
+import "./App.module.less";
+
 import AdoptedPetContext from '@/contexts/AdoptedPetContext';
 import Details from '@/pages/Details';
 import Home from '@/pages/Home';
