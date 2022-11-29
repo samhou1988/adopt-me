@@ -2,7 +2,16 @@ import React from 'react';
 
 import Pet from '@/components/Pet';
 
-const Results = ({ pets }) => {
+import { PetProps } from './type';
+
+type ResultsProps = {
+  pets: PetProps[]
+}
+
+const Results = (props: ResultsProps) => {
+  const {
+    pets
+  } = props;
   return (
     <div className="search">
       {pets.length === 0 ? (

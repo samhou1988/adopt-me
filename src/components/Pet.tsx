@@ -3,15 +3,8 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as DemoIcon } from '@/assets/svg/demo.svg';
 
 import styles from './Pet.module.less';
+import { PetProps } from './type';
 
-type PetProps = {
-  name: string,
-  animal: string,
-  breed: string,
-  images: string[],
-  location: string,
-  id: number
-}
 const Pet = (props: PetProps) => {
   const { name, animal, breed, images, location, id } = props;
 
