@@ -12,21 +12,21 @@ const App = () => {
     React.createElement(Pet, {
       name: "Luna",
       animal: "Dog",
-      breed: "Havanese"
+      breed: "Havanese",
     }),
     React.createElement(Pet, {
       name: "Luna",
       animal: "Dog",
-      breed: "Havanese"
+      breed: "Havanese",
     }),
     React.createElement(Pet, {
       name: "Luna",
       animal: "Dog",
-      breed: "Havanese"
+      breed: "Havanese",
     }),
   ]);
 };
 
-const container = document.getElementById('root')
-const root = ReactDOM.createRoot(container)
-root.render(React.createElement(App))
+const container = document.getElementById("root");
+const root = ReactDOM.createRoot(container);
+root.render(React.createElement(App));
