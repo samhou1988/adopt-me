@@ -5,13 +5,11 @@ import Pet from '@/components/Pet';
 import { PetProps } from './type';
 
 type ResultsProps = {
-  pets: PetProps[]
-}
+  pets: PetProps[];
+};
 
 const Results = (props: ResultsProps) => {
-  const {
-    pets
-  } = props;
+  const { pets } = props;
   return (
     <div className="search">
       {pets.length === 0 ? (

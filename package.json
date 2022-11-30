@@ -11,7 +11,7 @@
     "lint": "eslint \"src/**/*.{ts,tsx}\" --quiet",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "svgo": "svgo -f \"src/assets/svg\" -o \"src/assets/svg\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "prepare": "husky install"
   },
   "keywords": [],
@@ -39,7 +39,8 @@
     "svgo": "^3.0.2",
     "typescript": "^4.9.3",
     "vite": "^3.1.4",
-    "vite-plugin-svgr": "^2.2.2"
+    "vite-plugin-svgr": "^2.2.2",
+    "vitest": "^0.25.3"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.10.1",
