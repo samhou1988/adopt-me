@@ -1,0 +1,185 @@
+// Vitest Snapshot v1
+
+exports[`App 1`] = `
+[
+  <header>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Adopt Me!
+    </a>
+  </header>,
+  <div
+    className="search-params"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <label
+        htmlFor="location"
+      >
+        Location
+        <input
+          id="location"
+          name="location"
+          placeholder="Location"
+        />
+      </label>
+      <label
+        htmlFor="animal"
+      >
+        Animal
+        <select
+          id="animal"
+          name="animal"
+          onBlur={[Function]}
+          onChange={[Function]}
+        >
+          <option />
+          <option
+            value="bird"
+          >
+            bird
+          </option>
+          <option
+            value="cat"
+          >
+            cat
+          </option>
+          <option
+            value="dog"
+          >
+            dog
+          </option>
+          <option
+            value="rabbit"
+          >
+            rabbit
+          </option>
+          <option
+            value="reptile"
+          >
+            reptile
+          </option>
+        </select>
+      </label>
+      <label
+        htmlFor="breed"
+      >
+        Breed
+        <select
+          id="breed"
+          name="breed"
+        >
+          <option>
+            Please choose...
+          </option>
+        </select>
+      </label>
+      <button>
+        Submit
+      </button>
+    </form>
+    <div
+      className="search"
+    >
+      <h1>
+        No Pets Found
+      </h1>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Link changes the class when hovered 1`] = `
+[
+  <header>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Adopt Me!
+    </a>
+  </header>,
+  <div
+    className="search-params"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <label
+        htmlFor="location"
+      >
+        Location
+        <input
+          id="location"
+          name="location"
+          placeholder="Location"
+        />
+      </label>
+      <label
+        htmlFor="animal"
+      >
+        Animal
+        <select
+          id="animal"
+          name="animal"
+          onBlur={[Function]}
+          onChange={[Function]}
+        >
+          <option />
+          <option
+            value="bird"
+          >
+            bird
+          </option>
+          <option
+            value="cat"
+          >
+            cat
+          </option>
+          <option
+            value="dog"
+          >
+            dog
+          </option>
+          <option
+            value="rabbit"
+          >
+            rabbit
+          </option>
+          <option
+            value="reptile"
+          >
+            reptile
+          </option>
+        </select>
+      </label>
+      <label
+        htmlFor="breed"
+      >
+        Breed
+        <select
+          id="breed"
+          name="breed"
+        >
+          <option>
+            Please choose...
+          </option>
+        </select>
+      </label>
+      <button>
+        Submit
+      </button>
+    </form>
+    <div
+      className="search"
+    >
+      <h1>
+        No Pets Found
+      </h1>
+    </div>
+  </div>,
+]
+`;

@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { resolve } from 'path';
 
 import alias from '@rollup/plugin-alias';
@@ -23,5 +24,9 @@ export default defineConfig({
     port: 10086,
     open: true,
     cors: true,
+  },
+  test: {
+    globals: true,
+    environment: 'happy-dom',
   },
 });
